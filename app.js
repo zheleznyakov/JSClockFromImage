@@ -12,7 +12,16 @@ setInterval(() => {
 }, 1000);
 
 function drawArrows() {
+    //shadow off
+    ctx.shadowColor = "rgba(0,0,0,0)";
+
     ctx.drawImage(dial, 10, 10);
+
+    //shadow on
+    ctx.shadowOffsetX = 10;
+    ctx.shadowOffsetY = 5;
+    ctx.shadowColor = " rgba(0, 0, 0, 0.5)";
+    ctx.shadowBlur = 3;
 
     ctx.translate(board.width / 2, board.height / 2);
 
